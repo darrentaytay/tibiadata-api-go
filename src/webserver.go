@@ -246,10 +246,10 @@ func TibiadataHTMLDataCollectorV3(TibiaURL string) string {
 	}
 
 	// Convert string to io.Reader
-	res_io := strings.NewReader(res.String())
+	resIo := strings.NewReader(res.String())
 
 	// Load the HTML document
-	doc, err := goquery.NewDocumentFromReader(res_io)
+	doc, err := goquery.NewDocumentFromReader(resIo)
 	if err != nil {
 		log.Printf("[error] TibiadataHTMLDataCollectorV3 (URL: %s) error: %s", TibiaURL, err)
 	}
